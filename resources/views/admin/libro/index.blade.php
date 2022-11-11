@@ -3,12 +3,13 @@
 @section('title', 'Libros')
 
 @section('content')
-    <div style = "float: left">
-        <h1>Lista de libros</h1>
+    <div style = "float: left" class="encabezado">
+        <h1 >Lista de libros</h1>
     </div>
-    <div >
+    <div class="encabezado">
         <button class="btn btn-warning">Agregar libros</button>
     </div>
+    
     <table class="table">
     <thead>
         <tr>

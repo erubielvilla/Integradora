@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 
-Route::get('/', function () {
-    return view('home');
-    })->Middleware('auth'); 
+Route::get('/', function () { return view('home');})
+    ->Middleware('auth')
+    ->name('admin.home');
 
 //Ruta de inicio de sesion
 Route::get('/login', [SessionsController::class, 'create'])

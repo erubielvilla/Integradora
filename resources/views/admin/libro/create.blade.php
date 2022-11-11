@@ -3,10 +3,11 @@
 @section('title', 'Agregar libro')
 
 @section('content')
-  <form action="{{ route('libro.store') }}" method="POST">
-      
-    <h1>Crear libro</h1>
 
+  <h1 style="text-align:center">Crear libro</h1>
+  
+  <form action="{{ route('libro.store') }}" method="POST" class="margin">
+      
     @csrf
 
     <div class="mb-3">
@@ -37,7 +38,7 @@
       <label class="form-label">ISBN</label>
       <input type="text" class="form-control" id="ISBN" name="ISBN">
     </div>
-    <div class="form-group">
+    <div class="form-group" id="botones">
       <button class="btn btn-info" type="submit">Guardar</button>
       <a class="btn btn-danger" href="{{ URL::previous() }}">Cancelar</a>
     </div>

@@ -3,7 +3,7 @@
 @section('title', 'Creación del usuario')
 
 @section('content')
-  <form action="{{ route('usuario.store') }}" method="POST">
+  <form action="{{ route('usuario.store') }}" method="POST" class="margin">
       <h1>Creación de usuario</h1>
     @csrf
 
@@ -31,7 +31,7 @@
       <label class="form-label">Contraseña</label>
       <input type="password" class="form-control" name="Contraseña">
     </div>
-    <div class="form-group">
+    <div class="form-group" id="botones">
 		  <button class="btn btn-info" type="submit">Guardar</button>
 		  <a class="btn btn-danger" href="{{ URL::previous() }}">Cancelar</a>
 	  </div>
